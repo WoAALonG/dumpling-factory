@@ -52,7 +52,15 @@ namespace dumpling_factory
             Console.WriteLine("Кол-во автоматов для подготовки теста равно: " + Math.Ceiling(productionLineProductivityTesta / machinePerformanceTesta));
 
             //==================== Технологическая линия подготовки фарша =====================================================================
+            Console.Write("Введите производительность куттера в т/ч.\n=> ");
+            machinePerformanceFarsha = Convert.ToDouble(Console.ReadLine());
 
+            Console.Write("Введите массовую долю фарша в готовой продукции в %.\n=> ");
+            massFractionOfMincedMeat = Convert.ToDouble(Console.ReadLine());
+
+            productionLineProductivityFarsha = (massFractionOfMincedMeat * productionLineProductivityPelmenny) / 100;
+
+            Console.WriteLine("Кол-во куттеров для производства фарша: " + Math.Ceiling(productionLineProductivityFarsha / machinePerformanceFarsha));
 
         }
     }
