@@ -36,7 +36,7 @@ namespace dumpling_factory
 
             productionLineProductivityPelmenny = dailyOutput / (2 * shiftTime);
 
-            Console.WriteLine("Кол-во автоматов для изготовления пельменей равно: " + Math.Ceiling(productionLineProductivityPelmenny / machinePerformancePelmenny));
+            //Console.WriteLine("Кол-во автоматов для изготовления пельменей равно: " + Math.Ceiling(productionLineProductivityPelmenny / machinePerformancePelmenny));
 
             //==================== Технологическая линия подготовки теста =====================================================================
             Console.WriteLine("Технологическая линия подготовки теста.");
@@ -49,7 +49,7 @@ namespace dumpling_factory
 
             productionLineProductivityTesta = (massFractionOfDough * productionLineProductivityPelmenny) / 100;
 
-            Console.WriteLine("Кол-во автоматов для подготовки теста равно: " + Math.Ceiling(productionLineProductivityTesta / machinePerformanceTesta));
+            //Console.WriteLine("Кол-во автоматов для подготовки теста равно: " + Math.Ceiling(productionLineProductivityTesta / machinePerformanceTesta));
 
             //==================== Технологическая линия подготовки фарша =====================================================================
             Console.WriteLine("Технологическая линия подготовки фарша.");
@@ -62,6 +62,8 @@ namespace dumpling_factory
 
             productionLineProductivityFarsha = (massFractionOfMincedMeat * productionLineProductivityPelmenny) / 100;
 
+            Console.WriteLine("Кол-во автоматов для изготовления пельменей равно: " + Math.Ceiling(productionLineProductivityPelmenny / machinePerformancePelmenny));
+            Console.WriteLine("Кол-во автоматов для подготовки теста равно: " + Math.Ceiling(productionLineProductivityTesta / machinePerformanceTesta));
             Console.WriteLine("Кол-во куттеров для производства фарша: " + Math.Ceiling(productionLineProductivityFarsha / machinePerformanceFarsha));
 
         }
