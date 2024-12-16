@@ -39,7 +39,17 @@ namespace dumpling_factory
             Console.WriteLine("Кол-во автоматов для изготовления пельменей равно: " + Math.Ceiling(productionLineProductivityPelmenny / machinePerformancePelmenny));
 
             //==================== Технологическая линия подготовки теста =====================================================================
+            Console.WriteLine("Технологическая линия подготовки теста.");
 
+            Console.Write("Введите производительность тестомесильной машины в т/ч.\n=> ");
+            machinePerformanceTesta = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Введите массовую долю теста в готовой продукции в %.\n=> ");
+            massFractionOfDough = Convert.ToDouble(Console.ReadLine());
+
+            productionLineProductivityTesta = (massFractionOfDough * productionLineProductivityPelmenny) / 100;
+
+            Console.WriteLine("Кол-во автоматов для подготовки теста равно: " + Math.Ceiling(productionLineProductivityTesta / machinePerformanceTesta));
 
             //==================== Технологическая линия подготовки фарша =====================================================================
 
